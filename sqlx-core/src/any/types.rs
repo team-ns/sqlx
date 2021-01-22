@@ -46,7 +46,7 @@ impl_any_encode!(f64);
 impl_any_encode!(&'q str);
 impl_any_encode!(String);
 
-impl_any_type!(Uuid);
+impl_any_encode!(Uuid);
 
 // Decode
 
@@ -61,4 +61,4 @@ impl_any_decode!(f64);
 impl_any_decode!(&'r str);
 impl_any_decode!(String);
 
-impl_any_type!(Uuid);
+impl_any_decode!(Uuid);
