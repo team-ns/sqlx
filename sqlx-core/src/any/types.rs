@@ -16,6 +16,7 @@
 //! In addition, `Option<T>` is supported where `T` implements `Type`. An `Option<T>` represents
 //! a potentially `NULL` value from SQL.
 //!
+use uuid::Uuid;
 
 // Type
 
@@ -30,6 +31,8 @@ impl_any_type!(f64);
 impl_any_type!(str);
 impl_any_type!(String);
 
+impl_any_type!(Uuid);
+
 // Encode
 
 impl_any_encode!(bool);
@@ -43,6 +46,8 @@ impl_any_encode!(f64);
 impl_any_encode!(&'q str);
 impl_any_encode!(String);
 
+impl_any_type!(Uuid);
+
 // Decode
 
 impl_any_decode!(bool);
@@ -55,3 +60,5 @@ impl_any_decode!(f64);
 
 impl_any_decode!(&'r str);
 impl_any_decode!(String);
+
+impl_any_type!(Uuid);
